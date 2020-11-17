@@ -1,0 +1,333 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+  max-width: 100%;
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  max-width: 1600px;
+  overflow-x: hidden;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.enter:hover {
+  text-decoration: underline;
+}
+.btn-2 {
+  padding: 1em 3em;
+  border: 3px solid #00ffff;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(0, 255, 255, 0.2);
+  position: relative;
+  color: #00ffff;
+}
+.btn-2:before {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: #00ffff;
+  top: 0;
+  left: auto;
+  right: 0;
+  z-index: -1;
+  transition: all 300ms ease;
+}
+.btn-2:hover {
+  color: black;
+  box-shadow: none;
+}
+.btn-2:hover:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #00ffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.price-block {
+  background: #191B1C;
+  max-height: 323px;
+  display: flex;
+  padding: 40px 0;
+}
+.price-block img {
+  margin: 0 auto;
+}
+.price-list {
+  text-align: center;
+  color: white;
+}
+.price-list h6 {
+  margin-top: 20px;
+}
+.main {
+  background: #000;
+}
+.main-upHeader {
+  font-size: 12px;
+}
+.main-upHeader .before-img:before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 13px;
+  height: 13px;
+  background: url(../data/phone.png) center center no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+}
+.main-upHeader ul {
+  padding: 0;
+  margin: 0;
+}
+.main-upHeader li {
+  display: inline-block;
+  border-right: 1px solid #969696;
+  color: #969696;
+  margin: 14px 0;
+  padding: 0 14px;
+}
+.main-upHeader li a {
+  text-decoration: none;
+  color: #969696;
+}
+.main-upHeader .last {
+  border-right: none;
+}
+.main-upHeader .enter {
+  display: inline-block;
+  color: #969696;
+  padding: 14px;
+  float: right;
+}
+.main-header {
+  background-color: #0f0f0f;
+}
+.main-header .logo {
+  color: white;
+  font-family: 'Post No Bills Jaffna', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+}
+.main-header .nav-bar ul {
+  padding: 0;
+  margin: 0;
+}
+.main-header .nav-bar li {
+  display: inline-block;
+  color: #969696;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.main-header .nav-bar li a {
+  text-decoration: none;
+  color: #969696;
+}
+.main-header .nav-bar li a:hover {
+  color: white;
+  transition: .2s linear;
+}
+.main-header .nav-bar .last {
+  padding-right: 0;
+}
+.main-content {
+  background: #ffffff url(../data/main-bg.png) center center no-repeat;
+  height: 100vh;
+}
+.main-content p {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 77px;
+}
+.main-content .rectangleLogo {
+  margin-top: 161px;
+  text-align: center;
+  padding: 70px;
+  border: 2px solid white;
+}
+.main-content .mainLogo {
+  color: white;
+  font-family: 'Post No Bills Jaffna', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  position: relative;
+  line-height: 1.3;
+}
+.main-content .mainLogo:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  display: block;
+  position: absolute;
+}
+.main-content h1 {
+  font-size: 22px;
+  font-weight: normal;
+  color: white;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.season2020 {
+  color: white;
+}
+.season2020 .collection .row {
+  margin-left: 40px;
+}
+.header {
+  font-family: 'Playfair Display', sans-serif;
+  color: white;
+  font-weight: 900;
+  font-size: 36px;
+  margin: 50px 0;
+  text-align: center;
+  position: relative;
+  line-height: 4;
+}
+.header:after {
+  content: "";
+  display: block;
+  width: 150px;
+  background-color: #fff;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  margin: 10px auto;
+}
+.photo {
+  background: url(../data/ph-1.png) center center no-repeat;
+  height: 600px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.photo span .btn-2:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.photo .header {
+  margin: 0;
+  padding-top: 400px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+.button {
+  padding: 10px 30px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+.season2018 {
+  margin-top: 100px;
+  color: white;
+}
+.season2018 .photo {
+  background: url(../data/ph-2.png) center center no-repeat;
+}
+.season2018 .header {
+  margin-top: 0;
+}
+.season2018 .lorem {
+  text-align: center;
+}
+.season2018 .lorem p {
+  margin-bottom: 70px;
+}
+.newCollection {
+  color: white;
+}
+.newCollection p {
+  margin-bottom: 60px;
+}
+.brends {
+  background: #0F0F0F;
+}
+.brends .row {
+  padding-bottom: 80px;
+}
+footer {
+  background: url(../data/footer.png) center center no-repeat;
+  height: 400px;
+  color: white;
+  font-size: 14px;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  text-decoration: none;
+  display: inline-block;
+  background: #0f0f0f;
+  padding: 12px 20px;
+  margin: 0 10px 10px 0;
+  color: #d0d0d0;
+}
+footer ul li a {
+  color: #d0d0d0;
+}
+footer ul li a:hover {
+  color: white;
+}
+footer .row {
+  padding: 82px 0;
+}
+footer .footer-header {
+  font-size: 24px;
+  font-family: 'Playfair Display', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 45px;
+}
+.input {
+  padding: 13px;
+  background: #969696;
+  border: none;
+  color: white;
+  width: 180px;
+}
+.input::-moz-placeholder {
+  color: white;
+}
+.input::-webkit-input-placeholder {
+  color: white;
+}
+.button {
+  display: inline-block;
+  background: #0f0f0f;
+  color: white;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding: 15px 20px;
+}
+.underFooter {
+  color: white;
+  font-size: 12px;
+  padding: 17px 0;
+}
+.underFooter .dog {
+  color: #d0d0d0;
+}
+.underFooter .by {
+  float: right;
+}

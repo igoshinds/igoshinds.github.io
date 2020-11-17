@@ -1,0 +1,347 @@
+@gray:#969696;
+@light-gray:#D0D0D0;
+body {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: black;
+	max-width: 100%;
+}
+  body
+  {
+    width: 100%;
+    max-width: 100%;
+    max-width: 1600px;
+    overflow-x: hidden;
+  }
+  button, input, a {
+  	&:focus {
+  		outline:none; 
+
+  	}
+  }
+a:hover {
+	text-decoration: none;
+}
+.enter {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.btn-2{
+  padding: 1em 3em;
+  border: 3px solid #00ffff;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(0,255,255, 0.2);
+  position: relative;
+  color: #00ffff;
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: 0%; height: 100%;
+    background: #00ffff;
+    top: 0;  left: auto; right: 0;
+    z-index: -1;
+    transition: all 300ms ease;
+  }
+  
+  &:hover{
+    color: black; 
+    box-shadow:none;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 100%; height: 100%;
+      background: #00ffff;
+      top: 0; left: 0; right: 0;
+      z-index: -1;	
+    }
+  }
+}
+
+.price-block {
+	background: #191B1C;
+	max-height: 323px;
+	display: flex;
+	padding: 40px 0;
+	img {
+		margin: 0 auto;
+	}
+}
+.price-list {
+	text-align: center;
+	color:white;
+	h6 {
+		margin-top: 20px;
+	}
+}
+.main {
+	background: #000;
+	&-upHeader {
+		font-size: 12px;
+		.before-img {
+			&:before {
+				content: '';
+				display:inline-block;
+				margin-right: 10px;
+				width:13px;
+				height:13px;
+				background: url(../data/phone.png) center center no-repeat;
+				background-size: 100%;
+				vertical-align: middle;
+			}
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			display: inline-block;
+			border-right:1px solid @gray;
+			color:@gray;
+			margin: 14px 0;
+			padding:0 14px;
+			a {
+				text-decoration: none;
+				color:@gray;
+			}
+		}
+		.last {
+			border-right:none;
+		}
+		.enter {
+			display:inline-block;
+			color:@gray;
+			padding: 14px;
+			float:right;
+		}
+	}
+	&-header {
+		background-color: #0f0f0f;
+		.logo {
+			color:white;
+			font-family: 'Post No Bills Jaffna', sans-serif;
+			font-weight: 900;
+			font-size: 36px;
+		}
+		.nav-bar {
+			ul {
+				padding: 0;
+				margin: 0;
+			}
+			li {
+				display: inline-block;
+				color:@gray;
+				padding: 14px 20px;
+				text-transform:uppercase;
+				font-size: 14px;
+				a {
+					text-decoration:none;
+					color:@gray;
+					&:hover {
+						color:white;
+						transition: .2s linear;
+					}
+				}
+			}
+			.last {
+				padding-right:0;
+			}
+		}
+	}
+	&-content {
+		background: #fff url(../data/main-bg.png) center center no-repeat;
+		height:100vh;
+		p {
+			text-align:center;
+			color:white;
+			text-transform: uppercase;
+			margin-top: 77px;
+		}
+		.rectangleLogo {
+			margin-top:161px;
+			text-align: center;
+			padding: 70px;
+			border:2px solid white;
+		}
+		.mainLogo {
+			color:white;
+			font-family: 'Post No Bills Jaffna', sans-serif;
+			font-weight: 900;
+			font-size: 64px;
+			position: relative;
+			line-height: 1.3;
+			&:after {
+				content: '';
+				width:100%;
+				height:1px;
+				top: 100%;
+				left: 0;
+				background-color:white;
+				display:block;
+				position: absolute;
+			}
+		}
+		h1 {
+			font-size: 22px;
+			font-weight: normal;
+			color:white;
+			margin-top: 20px;
+			text-transform: uppercase;
+		}
+	}
+}
+.season2020 {
+	color:white;
+	.collection {
+		.row {
+			margin-left: 40px;
+		}
+
+	}
+}
+.header {
+	font-family: 'Playfair Display', sans-serif;
+	color:white;
+	font-weight: 900;
+	font-size: 36px;
+	margin: 50px 0;
+	text-align: center;
+	position: relative;
+	line-height: 4;
+	&:after {
+		content: "";
+		display: block;
+		width: 150px;
+		background-color: #fff;
+		height: 1px;
+		top:100%;
+		left:0;
+		z-index: 1;
+		margin: 10px auto;
+	}
+}
+.photo {
+	background: url(../data/ph-1.png) center center no-repeat;
+	height: 600px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	span {
+		.btn-2 {
+			&:hover {
+				color: #fff;
+				border-color: #fff;
+			}
+		}
+	}
+	.header {
+		margin: 0;
+		padding-top: 400px;
+		line-height: 2;
+		margin-bottom: 40px;
+	}
+}
+.button {
+	padding: 10px 30px;
+	border: 1px solid white;
+	text-transform: uppercase;
+	color:white;
+	text-decoration: none;
+}
+.season2018 {
+	margin-top: 100px;
+	color:white;
+	.photo {
+		background: url(../data/ph-2.png) center center no-repeat;
+	}
+	.header {
+		margin-top: 0;
+	}
+	.lorem {
+		text-align: center;
+		p {
+			margin-bottom: 70px;
+		}
+	}
+}
+.newCollection {
+	color:white;
+	p {
+		margin-bottom: 60px;
+	}
+}
+.brends {
+	background: #0F0F0F;
+	.row {
+		padding-bottom: 80px;
+	}
+}
+footer {
+	background: url(../data/footer.png) center center no-repeat;
+	height: 400px;
+	color:white;
+	font-size: 14px;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			text-decoration: none;
+			display: inline-block;
+			background: #0f0f0f;
+			padding: 12px 20px;
+			margin: 0 10px 10px 0;
+			color: #d0d0d0;
+			a {
+				color: #d0d0d0;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+	.row {
+		padding: 82px 0;
+	}
+	.footer-header {
+		font-size: 24px;
+		font-family: 'Playfair Display', sans-serif;
+		text-transform: uppercase;
+		padding-bottom: 45px;
+	}
+}
+.input {
+	padding: 13px;
+	background: @gray;
+	border:none;
+	color:white;
+	width: 180px;
+	&::-moz-placeholder {
+		color:white;
+	}
+	&::-webkit-input-placeholder {
+		color:white;
+	}
+}
+.button {
+	display: inline-block;
+	background: #0f0f0f;
+	color:white;
+	border:none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	padding: 15px 20px;
+}
+.underFooter {
+	color:white;
+	font-size: 12px;
+	padding: 17px 0;
+	.dog {
+		color:#d0d0d0;
+	}
+	.by {
+		float:right;
+	}
+}
