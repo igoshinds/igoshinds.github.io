@@ -1,0 +1,48 @@
+button:focus {
+outline: none;
+}
+.btn:hover {
+	color: #fff;
+}
+body {
+	background-color: #FDDEAD;
+	font-family: 'Open Sans', sans-serif;
+}
+.heart {
+	background: url(..//heart_1.png) center center no-repeat;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	transition: .4s;
+}
+.header {
+	text-align: center;
+}
+h1 {
+	margin: 100px 0 30px;
+	font-weight: 900;
+}
+h2 {
+	font-weight: 700;
+	margin: 30px 0;
+}
+h3 {
+	font-style: italic;
+}
+
+.help_btn {
+	border: none;
+	background-color: #00008B;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px 15px;
+	border-radius: 10px;
+	margin: 30px;
+}
+.main {
+	margin-bottom: 300px;
+}
+.green {
+	background-color: darkgreen;
+}

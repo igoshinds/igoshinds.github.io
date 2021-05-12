@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+	<title>Liza</title>
+</head>
+<body>
+	
+	<div id="app" class="main">
+		<div class="container">
+			<div class="header">
+				<h1>Предлагаю поиграть в игру</h1>
+				<div v-if="showIdea > 1">
+					<h2>Это новый уровень Шпиена!</h2>
+				</div>
+				<div v-if="showIdea > 2">
+					<h3>Поводи по сердечкам и увидишь что получится :))</h3>
+				</div>
+				<div v-if="showIdea > 3">
+					<h3>Главное начать нажать</h3>
+				</div>
+				<div v-if="showIdea > 4">
+					<h3>Нууу и водить мышкой можно не так быстро</h3>
+				</div>
+				<button class="btn help_btn" @click="plusShowIdea(showIdea)">Получить подсказку</button>
+				<button class="btn help_btn start" v-if="color" @click="btn_color">Ну или сразу начать</button>
+				<button class="btn help_btn start green" v-else @click="btn_color">Ну или сразу начать</button>
+			</div>
+			
+			<div class="heart" v-for="heart in amountHeart"></div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	
+	var webstore = new Vue({
+		el: "#app",
+		data: {
+			amountHeart: 1100,
+			showIdea: 1,
+			color: true,
+		},
+		methods: {
+			plusShowIdea(item){
+				this.showIdea++;
+			},
+			btn_color(){
+				this.color = this.color ? false : true;
+				console.log(this.color);
+			},
+		},
+	})
+
+</script>
+<script src="js.js"></script>
+</body>
+</html>
