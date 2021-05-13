@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="container">
+		<div id="app">
+			<div class="settings">
+				<h1>Выберетие параметры</h1>
+				<button class="btn button_color blue" @click="changeColor(one)">Голубой</button>
+				<button class="btn button_color yellow" @click="changeColor(two)">Желтый</button>
+				<button class="btn button_color red" @click="changeColor(three)">Красный</button>
+				<button class="btn button_color clear" @click="changeColor(clear)">Ластик</button>
+				<button class="btn button_color clear_all">Очистить всё</button>
+			</div>
+			<h3 class="hint" v-if="showHint">Нажмите чтобы рисовать</h3>
+			<h3 class="hint" v-else>Нажмите чтобы прекратить рисовать</h3>
+			<div class="areaPlay" @click="checkShowHint">
+				<div class="circle" v-for="circle in circles"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var webstore = new Vue({
+			el: '#app',
+			data: {
+				title: 'data',
+				circles: 2001,
+				one: '#00ffff',
+				two: 'yellow',
+				three: '#f00',
+				clear: '#000',
+				currentColor: '#ff0000',
+				borderColor: '00ff00',
+				showHint: true,
+			},
+			methods: {
+				changeColor(number){
+					this.currentColor = number;
+					if (number === '#000')
+						this.borderColor = '#fff';
+					else
+						this.borderColor = number;
+				},
+				checkShowHint(){
+					this.showHint = this.showHint ? false : true;
+				},
+			},
+		})
+
+
+	</script>
+	<script src="js/js.js"></script>
+
+</body>
+</html>

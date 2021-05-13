@@ -1,0 +1,65 @@
+button:focus {
+	outline: none;
+}
+
+body {
+	background-color: black;
+}
+.circle {
+	display: inline-block;
+	background-color: #000;
+	border-radius: 10px;
+	width: 16px;
+	height: 16px;
+	transition: .3s;
+}
+
+.settings {
+	text-align: center;
+}
+
+.button_color {
+	color: #000;
+	border: none;
+	padding: 10px 15px;
+	margin: 0 10px;
+}
+.button_color:hover {
+	box-shadow: none;
+}
+.blue {
+	box-shadow: 0 0 15px rgba(0, 255, 255, .5);
+	background-color: #00ffff;
+}
+.yellow {
+	box-shadow: 0 0 15px rgba(0, 255, 215, .5);
+	background-color: #FFD700;
+}
+.red {
+	box-shadow: 0 0 15px rgba(255, 0, 0, .5);
+	background-color: #FF0000;
+}
+.clear {
+	box-shadow: 0 0 15px rgba(255, 255, 255, .5);
+	background-color: #fff;
+}
+.clear_all {
+	border: 1px solid white;
+	color: white;
+}
+h1 {
+	color: #fff;
+	margin: 50px 0 30px;
+}
+.areaPlay {
+	border: 1px solid red;
+}
+.hint {
+	margin: 40px 0 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+.hidden {
+	color: #000;
+}
