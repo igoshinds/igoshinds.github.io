@@ -1,0 +1,430 @@
+html {
+    scroll-behavior: smooth;
+}  
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.preview {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to bottom, #fff, #005AFF);
+}
+.site-header {
+    padding-top: 30px;
+}
+.logo-photo {
+    display: inline;
+}
+.card-name {
+    display: inline;
+    font-weight: 600;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+    color: #000;
+}
+.search-bar {
+    background: url("../data/question.png") no-repeat 260px center;
+    background-size: 20px;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    box-shadow: 0 7px 5px rgba(0, 0, 0, .3);
+    transition: .2s;
+}
+.search-bar:focus {
+    box-shadow: none;
+}
+.number {
+    display: inline;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 40px;
+    position: absolute;
+    top: 25%;
+    text-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+}
+.main-btn {
+    display: block;
+    margin-left: 10px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .3);
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    background-color: #005AFF;
+    border-radius: 50px;
+    padding: 10px 18px;
+    transition: .2s;
+}
+.right-btn {
+    float: right;
+}
+.main-btn:hover {
+    box-shadow: none;
+}
+.cen {
+    text-align: center;
+}
+.client {
+    position: relative;
+}
+.title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 600;
+    padding-top: 230px;
+    text-shadow: 0 5px 7px rgba(0, 0, 0, .4);
+}
+.registr {
+    margin: 100px auto 0;
+}
+.sub-title {
+    font-weight: 700;
+    font-size: 46px;
+}
+.card {
+    background: linear-gradient(to bottom, #005AFF, #fff);
+
+}
+.under-background {
+    background-color: #005AFF;
+}
+.frame-2 {
+    background: linear-gradient(to bottom, #005AFF, #fff);
+    padding: 100px 0;
+}
+ul {
+    list-style: none;
+    margin: 40px 0;
+}
+li {
+    position: relative;
+    font-weight: 500;
+}
+li::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #005AFF;
+    top: 35%;
+    left: -15px;
+}
+.empty-btn {
+    background: none;
+    box-shadow: none;
+    color: #000;
+    border: 2px solid #fff;
+}
+.cards {
+    padding-top: 100px;
+}
+.title-card {
+    font-size: 20px;
+    font-weight: 600;
+}
+.gray-list {
+    font-size: 14px;
+    padding: 10px 0 0 15px;
+    margin: 10px 0;
+}
+.gray-list li {
+    margin: 5px 0;
+}
+.gray-list li::before {
+    top: 10px;
+}
+.card-image {
+    width: 90%;
+    height: 90%;
+}
+.wrap {
+    padding: 0;
+    margin: 0;
+}
+.card-left {
+    margin-top: 30px;
+    padding-right: 20px;
+}
+.card-right {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.offers {
+    padding-top: 100px;
+    width: 100%;
+    height: 500px;
+}
+.offers-title {
+    font-weight: 700;
+    font-size: 30px;
+}
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 450px;
+    z-index: 99;
+    height: 70px;
+    width: 70px;
+    border: none;
+    background: url(../data/left-arrow.png) center no-repeat;
+  }
+  .next {
+    position: absolute;
+    top: 50%;
+
+    z-index: 99;
+    height: 70px;
+    right: 10px;
+    width: 70px;
+    border: none;
+    background: url(../data/right-arrow.png) center no-repeat;
+  }
+.offers-slider-item img {
+    float: right;
+  }
+.mortgage {
+    padding: 100px 0;
+}
+.mortgage p {
+    font-weight: 700;
+    margin-top: 10px;
+}
+.mortgage .main-btn {
+    display: inline-block;
+}
+a {
+    margin-left: 30px;
+    display: inline-block;
+}
+.mortgage .offers-title {
+    margin-bottom: 50px;
+}
+footer {
+    padding: 30px 0;
+}
+.footer {
+    text-align: center;
+}
+footer p {
+    font-weight: 600;
+}
+.ftr-name {
+    font-size: 20px;
+}
+.btn-up {
+    border: 1px solid #000;
+    border-radius: 50px;
+    background: none;
+    padding: 7px 20px;
+}
+.slider {
+    width: 680px;
+    height: 330px;
+    overflow: hidden;
+
+}
+.right {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar {
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+.bar:hover {
+    opacity: .8;
+    transform: scale(1.1);
+}
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+.slides {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.slide {
+    width: 33.34%;
+    transition: all .6s ease;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+
+}
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -33.34%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -66.68%;
+}
+/* form {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0 auto;
+    width: 450px;
+    height: 600px;
+    background-color: beige;
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+.form-title {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 40px 0;
+}
+form input {
+    display: block;
+    width: 300px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    margin: 0 auto 30px;
+    border: none;
+} */
+.form-btn {
+    margin: 50px auto;
+    border-radius: 3px;
+    padding: 15px 20px;
+}
+form {
+    color: rgb(124, 124, 124);
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 750px; 
+    float: right;  
+}
+.block-form {
+    padding: 50px 0;
+}
+form label {
+    font-size: 14px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.form-title {
+    color: black;
+    font-weight: 500;
+    font-size: 30px;
+}
+form input {
+    background-color: #ecf1f7;
+    border-radius: 3px;
+    display: block;
+    margin: 15px auto;
+    width: 495px;
+    padding: 15px 40px;
+    border: none;
+    font-size: 14px;
+}
+.input {
+    background-color: #ecf1f7;
+    border-radius: 3px;
+    display: block;
+    margin: 15px auto;
+    width: 495px;
+    padding: 15px 40px;
+    border: none;
+    font-size: 14px;
+}
+.body-calc {
+    /* background-color: rgb(236, 236, 236); */
+    background: linear-gradient(180deg ,#f5f5f6,rgba(245,245,246,0)) no-repeat;
+}
+.calc-header {
+    width: 750px;
+    border-bottom: 1px solid rgb(124, 124, 124);
+}
+.back-btn {
+    background-color: rgb(245, 217, 59);
+    margin-left: 250px;
+    top: 0;
+}
+.next-page-btn {
+    margin-right: 700px;
+    top: 0;
+}
+.inline-input {
+    display: inline;
+    width: 240px;
+}
+.left-input {
+    margin-right: 15px;
+}
+.order-block {
+    padding-top: 100px;
+}
+.date {
+    position: relative;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    width: 150px;
+    padding-bottom: 20px;
+}
+/* .date::after {
+    content: "";
+    margin-top: 10px;
+    width: 150px;
+    height: 2px;
+    border-color: black;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    display: block;
+    z-index: 99;
+} */
+.progress-ring {
+}
+.progress-ring__circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: .3s;
+    /* stroke-dashoffset: ; */
+}
+.last-page h1 {
+    text-align: center;
+}
+.last-page a {
+    text-align: center;
+    display: block;
+}
+.a-btn {
+    text-align: center;
+    display: block;
+}
+.last-page h4 {
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: center;
+}

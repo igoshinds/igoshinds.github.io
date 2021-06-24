@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body class="body-calc">
+    
+    <div id="app">
+
+        <div class="row">
+            <div class="col-lg-8 block-form">
+                <div v-if="page === 0">
+                    <form action="#">
+                        <div class="calc-header"><h1 class="form-title">Оформить заявку</h1></div>
+                        <!-- <input type="text" placeholder="Цель кредита"> -->
+                        <select class="input">
+							<option disabled value="">Цель кредита</option>
+							<!-- Цикл пробегающий словарь -->
+							<option v-for="(num, key) in targetCredit" v-bind:value="key">{{num}}</option>
+						</select>
+                        <input type="text" placeholder="ФИО" v-model.trim="order.name">
+                        <input class="inline-input left-input" type="text" placeholder="Сумма кредита" v-model.trim="order.credit">
+                        <input class="inline-input" type="text" placeholder="Срок (лет)" v-model.trim="order.date">
+                        <input type="text" placeholder="Номер телефона">
+                        <input type="text" placeholder="E-mail">
+                        <!-- <button class="form-btn main-btn next-page-btn" @click="nextPage()">Далее</button> -->
+                    </form>
+                </div>
+        
+                <div v-else-if="page === 1">
+                    <form action="#">
+                        <div class="calc-header"><h1 class="form-title">Оформить заявку</h1></div>
+                        <input class="inline-input left-input" type="text" placeholder="Серия и номер">
+                        <input class="inline-input" type="text" placeholder="Дата рождения">
+                        <input type="text" placeholder="Место рождения">
+                        <input class="inline-input left-input" type="text" placeholder="Код подразделения">
+                        <input class="inline-input" type="text" placeholder="Дата выдачи">
+                        <input type="text" placeholder="Кем выдан">
+                        <h5 class="inFormTitle">Адрес постоянной регистрации</h5>
+                        <input type="text" placeholder="Индекс">
+                        <input type="text" placeholder="Регион">
+                        <!-- <div class="row">
+                            <div class="col-lg-6">
+                                <button class="back-btn form-btn main-btn" @click="prevPage()">Назад</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button class="form-btn main-btn next-page-btn" @click="nextPage()">Далее</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+        
+                <div v-else-if="page === 2">
+                    <form action="#">
+                        <div class="calc-header"><h1 class="form-title">Оформить заявку</h1></div>
+                        <h5 class="inFormTitle">Место работы</h5>
+                        <!-- <input type="text" placeholder="Выеберите тип занятости"> -->
+                        <select class="input">
+							<option disabled value="">Выберите тип занятости</option>
+							<!-- Цикл пробегающий словарь -->
+							<option v-for="(num, key) in works" v-bind:value="key">{{num}}</option>
+						</select>
+                        <input type="text" placeholder="Название организации">
+                        <input type="text" placeholder="Рабочий телефон">
+                        <input type="text" placeholder="Название должности">
+                        <!-- <input class="inline-input left-input" type="text" placeholder="Тип должности"> -->
+                        <select class="input">
+							<option disabled value="">Тип должности</option>
+							<!-- Цикл пробегающий словарь -->
+							<option v-for="(num, key) in worksPlace" v-bind:value="key">{{num}}</option>
+						</select>
+                        <input class="inline-input" type="text inline-input" placeholder="Стаж работы">
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 order-block" v-if="page < 3">
+                <div class="name"><strong>{{order.name}}</strong></div>
+                <p>Вы выбрали кредит на сумму: <br><strong>{{order.credit}}</strong> ₽</p>
+                <p class="date">На срок: <br><strong>{{order.date}}</strong> лет</p>
+                <p>Вероятность одобрения кредита</p>
+                <div class="progressBar">
+                    <svg class="progress-ring" width="150">
+                        <circle class="progress-ring__circle" stroke="green" stroke-width="3" cx="60" cy="60" r="52" fill="transparent"></circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row"  v-if="page < 3">
+            <div class="col-lg-6">
+                <button class="back-btn form-btn main-btn" @click="prevPage()">Назад</button>
+            </div>
+            <div class="col-lg-6">
+                <button class="form-btn main-btn next-page-btn" @click="nextPage()">Далее</button>
+            </div>
+        </div>
+        </div>
+        <div class="last-page" v-if="page >= 3">
+            <h1>Заявка одобрена</h1>
+            <h4><strong>{{order.name}}</strong> Спасибо что выбрали нас!</h4>
+            <a href="index.html"><button class="main-btn form-btn a-btn">На главную</button></a>
+        </div>
+        
+
+    </div>
+
+    </script>
+    <script>
+
+        var webstore = new Vue({
+            el: '#app',
+            data: {
+                page: 0,
+                percent: 0,
+                targetCredit: {
+                    'one': 'Ремонт',
+                    'two': 'Покупка недвижимости',
+                    'three': 'Покупка автомобиля',
+                },
+                works: {
+                    'full': 'Полный рабочий день',
+                    'partTimeJob': 'Неолный рабочий день',
+                },
+                worksPlace: {
+                    'one': 'Директор',
+                    't': 'Администратор',
+                    'th': 'Заведующий',
+                    'f': 'Программист',
+                },
+                order: {
+                    name: '',
+                    credit: '',
+                    date: '',
+                }
+            },
+            methods: {
+                nextPage(){
+                    this.page += 1;
+                    this.percent += 34;
+                },
+                prevPage(){
+                    this.page -= 1;
+                    this.percent -= 34;
+                } 
+            },
+        })
+
+    </script>
+    <script src="js/js.js"></script>
+</body>
+</html>
